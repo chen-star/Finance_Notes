@@ -4,8 +4,8 @@ target/
 !**/src/test/**/target/
 src/
 .idea/
-pom.xml
-finance.iml
+./pom.xml
+./finance.iml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
