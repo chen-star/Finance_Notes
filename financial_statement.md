@@ -158,3 +158,56 @@ Closing cash balance (from balance sheet 2)
 
 
 ## Ratios
+
+#### Profitability
+
+* Profit Margin
+
+How much money a company keeps for itself.
+~~~
+Profit Margin = Net Profit / Revenue
+~~~
+
+* ROE
+
+How much money a company generates in return for invested funds.
+~~~
+ROE = Net Profit / Equity
+~~~
+
+* Free cash flow
+
+Ability to generate cash above operational needs.
+Can be invested in new projects, acquire new companies, pay dividends, settle debts.
+~~~
+Free cash flow = Operating Cash - CAPEX
+~~~
+
+---
+
+#### Efficiency
+
+* Asset Turnover
+
+How much revenue is generated per $1 in assets.
+~~~
+Asset Turnover = Revenue / Assets
+~~~
+
+---
+
+#### Safety
+
+* Interest Coverage
+
+Ability to serve the debt.
+~~~
+Interest Coverage = Operating Profit / Interest Expenses
+~~~
+
+* Debt Ratio
+
+How much of the company's assets is financed with debt.
+~~~
+Debt Ratio = Debt / Assets
+~~~
