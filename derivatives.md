@@ -6,19 +6,19 @@
   * 2 categories:
     * **Cash Product**
       * e.g. `stocks, bonds, currencies, commodities`
-      * Bond: 
-        * A bond is an asset, often regarded as a 'debt instrument'. One may think of 'owning' a bond as the same thing as 'owning' debt.
-        * The principal of a loan in bond is called 'par value' or 'face value'.
-        * The bond price paid by the bond holders to the bond issuers represents a loan or debt. In essence, the bond buyer is lending the bond price to the bond issuer. 
+      * Bond:
         ~~~
         Bond Holder                       Bond Issuer
                     --------> Bond Price
                     <-------- Interest
                     <-------- Interest
                     <-------- Interest
-                        ...
+                           ...
                     <-------- Par Value
         ~~~
+        * A bond is an asset, often regarded as a 'debt instrument'. One may think of 'owning' a bond as the same thing as 'owning' debt.
+        * The principal of a loan in bond is called 'par value' or 'face value'.
+        * The bond price paid by the bond holders to the bond issuers represents a loan or debt. In essence, the bond buyer is lending the bond price to the bond issuer.
 
     * **Derivatives**
       * A derivative is an asset linked to (or derived from) another asset, called the underlying asset, or just underlying.
