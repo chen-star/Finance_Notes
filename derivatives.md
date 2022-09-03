@@ -9,6 +9,7 @@
       * Bond:
         ~~~
         Bond Holder                       Bond Issuer
+        (Loaner)                          (Borrower)
                     --------> Bond Price
                     <-------- Interest
                     <-------- Interest
@@ -57,12 +58,35 @@
   * Compounding convention
     * Assume: r(t) is the annual interest rate, in each (m times per year) compounding period, the earned interest is (r(t) / m) * P0
     * The future value of P0 is: `P(t) = (1 + r(t) / m) ^ (mt) * P0`
+    * Continuous Compounding
+      * It's the limit of periodic compounding as the frequency m to infinity
+      * The future value of P0 is: `P(t) = e ^ (r(t)*t) * P0`
 
 
 * **Time Value of Money (TVM)**:
   * TVM is a concept that a sum of money is worth more now than the same sum will be at a future date due to its earnings potential.
   * `present value (PV)`: PV of X, is the amount that should be invested today at prevailing interest rates, so that at time t the investment will be worth exactly X.
     * `(1 + r(t) / m) ^ (mt) * PV = X` => `PV = X / (1 + r(t) / m) ^ (mt)`
-    * PV also called discounted value
+    * PV is also called discounted value
   * `discount factor`: the value today of receiving $1 at time t. Discount factors reflect the time value of money.
     * `PV = d(t) * X`, where `d(t) = (1 + r(t) / m)  ^ (mt)`
+
+
+* Investment Return Measures
+  * Gross Return
+    * `V(t + x) / V(t)`, V(t) is the value of some investment or asset at time t. 
+  * Net Return
+    * `(V(t + x) - V(t)) / V(t)`
+  * Discounted Cash Flow Analysis
+    * Suppose a holder own an asset, another party pays a seq of payments c1, c2, ..., cN, at the corresponding times t1, t2, ..., tN.
+    * The payments ci are called cash flows. 
+    * To value our asset (i.e. to value a stream of cash flows), we must know what the PV of a stream of cash flow is. 
+    * PV of a stream of cash flow = `d(t1)c1 + d(t2)c2 + ... + d(tN)cN`
+
+
+* **Yield Curves & Discount Curves**
+  * Yield Curves
+    * A yield curve quantifies the relationship between return of a fixed income security and term or maturity, the term structure of interest rates.
+  * Discount Curves
+    * A primary application of yield curves in finance is to produce discount curves.
+    * Discount Curve is a function d(T) which for any T is a discount factor corresponding to discounting back from time T.
