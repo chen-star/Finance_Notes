@@ -23,7 +23,17 @@
         * The bond price paid by the bond holders to the bond issuers represents a loan or debt. In essence, the bond buyer is lending the bond price to the bond issuer.
 
       * Stock:
-        * 
+        ~~~text
+        Shareholder                         Company
+                    --------> Share Price
+                    <-------- Dividend
+                    <-------- Dividend
+                            ...
+        ~~~
+        
+      * Currencies:
+        * Assume, we have K allocation (unit) of a foreign currency, interest rate of this currency is rf, S(t) is the exchange rate of domestic to foreign currency at time t.
+        * The FV of domestic currency we have is: K * (e ^ (rf * t)) * S(t)
 
       * **Derivatives**
         * A derivative is an asset linked to (or derived from) another asset, called the underlying asset, or just underlying.
