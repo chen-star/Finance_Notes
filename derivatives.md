@@ -6,8 +6,9 @@
   * 2 categories:
     * **Cash Product**
       * e.g. `stocks, bonds, currencies, commodities`
+      
       * Bond:
-        ~~~
+        ~~~text
         Bond Holder                       Bond Issuer
         (Loaner)                          (Borrower)
                     --------> Bond Price
@@ -21,13 +22,19 @@
         * The principal of a loan in bond is called 'par value' or 'face value'.
         * The bond price paid by the bond holders to the bond issuers represents a loan or debt. In essence, the bond buyer is lending the bond price to the bond issuer.
 
-    * **Derivatives**
-      * A derivative is an asset linked to (or derived from) another asset, called the underlying asset, or just underlying.
-      * The structure and value of the derivative asset is defined by its relationship to the underlying.
-      * e.g. `forwards, futures, swaps, options`
-        * forwards and futures: are contracts that lock in the price 2 parties will buy and sell an asset for at some future date. The traded asset is the underlying.
-        * options: similar to forwards, but one party has the right not to participate at the time the contract expires.
-        * swaps: linked to interest rates, allowing a floating interest rate to be switched to a fixed rate. In this case, the underlying asset is an interest rate.
+      * Stock:
+        * 
+
+      * **Derivatives**
+        * A derivative is an asset linked to (or derived from) another asset, called the underlying asset, or just underlying.
+        * The structure and value of the derivative asset is defined by its relationship to the underlying.
+        * e.g. `forwards, futures, swaps, options`
+          * forwards and futures: are contracts that lock in the price 2 parties will buy and sell an asset for at some future date. The traded asset is the underlying.
+          * options: similar to forwards, but one party has the right not to participate at the time the contract expires.
+          * swaps: linked to interest rates, allowing a floating interest rate to be switched to a fixed rate. In this case, the underlying asset is an interest rate.
+
+
+---
 
 
 * **Value**:
@@ -41,6 +48,8 @@
         * discounted cash flow analysis
         * arbitrage
           * is a relative valuation method, and is the ideal tool for determining the relationship between the value of a derivative asset and the value of its underlying.
+
+---
 
 
 * **Interest Rate**:
@@ -70,6 +79,8 @@
     * SONIA: overnight rate only based on actual txns, insensitive to credit risk. 
     * SOFR: overnight rate only based on actual txns, 
 
+---
+
 
 * **Time Value of Money (TVM)**:
   * TVM is a concept that a sum of money is worth more now than the same sum will be at a future date due to its earnings potential.
@@ -78,6 +89,8 @@
     * PV is also called discounted value
   * `discount factor`: the value today of receiving $1 at time t. Discount factors reflect the time value of money.
     * `PV = d(t) * X`, where `d(t) = (1 + r(t) / m)  ^ (mt)`
+
+---
 
 
 * Investment Return Measures
@@ -96,6 +109,8 @@
     * Yield to maturity: most common yield measure in bond.
       * `P = sum(ci / (1 + y) ^ Ti)`, P is the market price of the bond, ci is the coupons(interests) are paid at time Ti
       * y is the interest rate such that the market price of the bond would be recovered if all payments were discounted by it
+
+---
 
 
 * **Yield Curves & Discount Curves**
