@@ -4,5 +4,5 @@
 * [Financial Statement](./financial_statement.md)
 
 ## Derivatives
-* [Derivatives](src/derivatives/derivatives.md)
-  * [Interest Rate Swap](src/derivatives/interest_rate_swap.md)
+* [Derivatives](derivatives/derivatives.md)
+  * [Interest Rate Swap](derivatives/interest_rate_swap.md)
