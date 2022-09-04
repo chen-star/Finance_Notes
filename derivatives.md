@@ -151,3 +151,14 @@
           * `P2 = d(0.5) * 250 + d(1) * 10,250` => `d(1) = 0.9637` => `y(t) = 3.7%`
         * Bond 3:
           * `P3 = d(1) * 700 + d(2) * 10,700` => `d(2) = 0.91891` => `y(t) = 4.2%`
+
+---
+
+* **Long / Short position**
+  * Long position:
+    * We say that we have a long position on a particular asset if the value of our portfolio goes up when the value of the asset goes up.
+    * The simplest way to take a long position is to buy it. 
+  * Short position:
+    * We say that we have a short position on a particular asset if the value of our portfolio goes down when the value of the asset goes up.
+
+
