@@ -61,6 +61,14 @@
     * Continuous Compounding
       * It's the limit of periodic compounding as the frequency m to infinity
       * The future value of P0 is: `P(t) = e ^ (r(t)*t) * P0`
+    * Simple Interest
+      * for short term interest rates
+      * only applied on the original principal. no compounding. 
+      * If we loan a principal F at a simple interest r for a duration T years, the total interest paid will be `rTF`
+  * LIBOR, SONIA, SOFR, Fed Funds Rate
+    * LIBOR: interest rates reflect the borrowing costs banks pay for unsecured borrowing from other banks for loan terms ranging from overnight to 1 year.
+    * SONIA: overnight rate only based on actual txns, insensitive to credit risk. 
+    * SOFR: overnight rate only based on actual txns, 
 
 
 * **Time Value of Money (TVM)**:
@@ -82,6 +90,12 @@
     * The payments ci are called cash flows. 
     * To value our asset (i.e. to value a stream of cash flows), we must know what the PV of a stream of cash flow is. 
     * PV of a stream of cash flow = `d(t1)c1 + d(t2)c2 + ... + d(tN)cN`
+  * Yield
+    * A yield for a bond, or other securities, is a measure of the return of the investment.
+    * Current yield = `Annual Interest (coupon value) / Price`
+    * Yield to maturity: most common yield measure in bond.
+      * `P = sum(ci / (1 + y) ^ Ti)`, P is the market price of the bond, ci is the coupons(interests) are paid at time Ti
+      * y is the interest rate such that the market price of the bond would be recovered if all payments were discounted by it
 
 
 * **Yield Curves & Discount Curves**
@@ -90,3 +104,25 @@
   * Discount Curves
     * A primary application of yield curves in finance is to produce discount curves.
     * Discount Curve is a function d(T) which for any T is a discount factor corresponding to discounting back from time T.
+    * Spot Rate Curve:
+      * A special kind of discount curve, where y(T) is a (continuously compounded) spot rate curve.
+      * `d(T) = e ^ (-y(T) * T)` => `y(t) = - log(d(T)) / T`
+  * Bootstrapping Spot Rate Curve from Bonds
+    * Bootstrapping is the main technique for building a yield curve from real market data.
+    * Steps:
+      1. Assume we have a collection of N bonds with maturities T1 < T2 < ... < TN, and market prices P1, P2, ... , PN
+      2. We first choose d(T) for T <= T1 to discount the coupons of bond 1 and recover P1.
+      3. for T1 < T <= T2, get d(T) from bond 2.
+      4. repeat
+    * Eg.:
+      * Suppose we have 3 bonds:
+        * Bond 1: 0 coupon bond, a $1k face value, maturing in 6 months, trading price P1 = $985
+        * Bond 2: 5% coupon, with semiannual payments, a $10k face value, maturing in 1 years, trading price p2 = $10,124
+        * Bond 3: 7 % coupon, with annual payments, a $10k face value, maturing in 2 years, trading price p3 = $10,507
+      * Calc d(t) & y(t):
+        * Bond 1:
+          * `P1 = d(0.5) * 1k` => `d(0.5) = 985 / 1k = 0.985` => `y(0.5) = - (log(0.985)) / 0.5 = 3%`
+        * Bond 2:
+          * `P2 = d(0.5) * 250 + d(1) * 10,250` => `d(1) = 0.9637` => `y(t) = 3.7%`
+        * Bond 3:
+          * `P3 = d(1) * 700 + d(2) * 10,700` => `d(2) = 0.91891` => `y(t) = 4.2%`
