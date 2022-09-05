@@ -162,3 +162,32 @@
     * We say that we have a short position on a particular asset if the value of our portfolio goes down when the value of the asset goes up.
 
 
+---
+---
+---
+
+## Arbitrage
+
+* **Definition**
+  * Arbitrage is the simultaneous purchase and sale of the same asset in different markets in order to profit from differences in the assets' listed price. 
+  * Usually arbitrages will be realized in the following way: a portfolio will be presented that can be entered without cost, that yields a certain and positive profit at some time t > 0.
+
+
+* **The Law of One Price**
+  * Definition
+    * Assume, A & B are assets with prices PA(t) & PB(t) at time t (t > 0). Prob(PA(t) == PB(t)) = 1. 
+    * Then, either (1) PA(0) == PB(0) or (2) there's an arbitrage.
+  * Prove
+    * Assume, PA(0) > PB(0) => we need to prove there's an arbitrage.
+    * => to construct an arbitrage
+      * => at time=0 (current), take a short position on A, long on B
+        * => borrowed A and sold A, purchased B (no cash spent on this portfolio)
+          * => cash flow: PA(0) - PB(0) > 0 (positive cash flow)
+          * => portfolio: 
+            * -A
+            * B
+            * cash: PA(0) - PB(0)
+      * => at time=t (future)
+        * => sold B, purchased B and returned A
+        * => portfolio:
+          * cash: (PA(0) - PB(0)) * (e ^ (rt)) -> risk-less profit
