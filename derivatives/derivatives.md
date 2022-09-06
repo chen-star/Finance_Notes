@@ -38,6 +38,7 @@
       * **Derivatives**
         * A derivative is an asset linked to (or derived from) another asset, called the underlying asset, or just underlying.
         * The structure and value of the derivative asset is defined by its relationship to the underlying.
+        * The linkage of the derivative to the underlying is usually through the payoffs of the derivative. The payoffs are the revenues paid to holders of the derivative product.
         * e.g. `forwards, futures, swaps, options`
           * forwards and futures: are contracts that lock in the price 2 parties will buy and sell an asset for at some future date. The traded asset is the underlying.
           * options: similar to forwards, but one party has the right not to participate at the time the contract expires.
@@ -191,3 +192,14 @@
         * => sold B, purchased B and returned A
         * => portfolio:
           * cash: (PA(0) - PB(0)) * (e ^ (rt)) -> risk-less profit
+
+
+---
+---
+---
+
+## Derivatives
+
+* **Basics**
+  * spot price / cash price
+    * The price of the underlying asset is referred to as the cash price or the spot price.
