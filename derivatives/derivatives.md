@@ -133,6 +133,15 @@
     * Spot Rate Curve:
       * A special kind of discount curve, where y(T) is a (continuously compounded) spot rate curve.
       * `d(T) = e ^ (-y(T) * T)` => `y(t) = - log(d(T)) / T`
+  * LIBOR Curve / LIBOR Spot Curve
+    * Notation: 
+      * P(t, T): the price, at time=t of a zero coupon bond maturing at time T.
+        * Assume, all zero coupon bonds have a $1 face value, then P(t, T) is the present value, at time=t of $1 paid at time=T.
+        * when t=0, P(0, T) = d(T)
+        * when continuously compounded, P(t, T) = e ^ (-(T-t) * y(t, T))
+        * when simple compounded, P(t, T) = 1 / (1 + (T - t) * L(t, T))
+    * Definition:
+      * It's the curve of discount factors implied by the spot LIBOR rates up to 1 year tenor, together with market observed Eurodollar futures prices and swap rates.
   * Bootstrapping Spot Rate Curve from Bonds
     * Bootstrapping is the main technique for building a yield curve from real market data.
     * Steps:
@@ -238,4 +247,39 @@
   * FX Forwards
     * FX: foreign exchange
     * locks in a particular exchange for the expiration date of the contract.
-    * 
+  * Forward Interest Rates
+    * A FIR is an interest rate that can be locked in now for some loan term starting in the future. 
+    * L(t, T1, T2): the simply compounded rate that can be locked in at time=t for a loan term from T1 to T2 from the prevailing spot LIBOR curve. 
+
+---
+
+* **Futures**
+  * A future contract is a contract between a seller and buyer to sell a certain asset at a fixed time in the future at a price that is agreed to when the contract is written. 
+  * Diff
+  ~~~text
+                    Forward                     Future
+  Traded on  |      OTC               |      stock exchange
+  Settlement |      On maturity date  |      On daily basis (market to market)
+  Risk       |      High              |      Low
+  Liquidity  |      Low               |      High 
+  ~~~
+  * Terminology:
+    * KT(t): 
+      * future price, contracted price of a future contract. 
+      * the future price for a contract originated at time=t and expiring at time=T. 
+      * usually 1 unit of the underlying.
+  * Marking to Market Process
+    * Process:
+      * Assume, the days of a future contract's life are given by t1, t2, ..., tN=T
+      * from t1 to t2, the futures price changes from KT(t1) to KT(t2)
+        * for short position:
+          * Assume, KT(t2) < KT(t1)
+          * => Thus, at the end of t2, the exchange would make a cash payment to the short's account with amount=KT(t1) - KT(t2) > 0
+          * Assume, KT(t2) > KT(t2)
+          * => Thus, at the end of t2, the exchange will charge this amount to the short
+    * Margin Account:
+      * Margins: When a new future position is opened, the investor must post an initial margin in cash in a margin account with the exchange. 
+      * The balance in the margin account must be maintained above the maintenance margin requirement, which is a smaller than the initial margin requirement. 
+      * Whenever the balance goes below the maintenance margin requirement, the exchange notifies the investor with a margin call. The investor must then deposit funds in the margin account to bring the balance up to the initial margin level.
+  * Future Price & Spot Price:
+    * As t approaches the expiration date, the futures and spot prices come together (convergence) (KT(T) == S(T))
