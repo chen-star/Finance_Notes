@@ -146,6 +146,42 @@
       1. building short end: use cash LIBOR rates for tenors up to 3 months. We can compute discount factor directly from these rates, and from discount factors can compute the spot rates.
       2. building midrange: for tenors between 3 months and about 2 to 5 years, we use forward LIBOR rates derived from Eurodollar futures rates.
       3. building long end: for the rest of the curve, we use market swap rates. We use the pricing formula for swaps to back out the discount factors and hence the spot rates. 
+      * Eg.
+      ~~~text
+      Assume following market rates:
+      Type          Tenor       Rate/Price
+      Deposits      1M          0.8
+                    2M          1.0
+                    3M          1.3
+      Futures       6M          98.4
+                    9M          98.0
+                    12M         97.6
+                    15M         97.3
+                    18M         97.0
+      Swaps         2Y          2.4
+                    4Y          2.7
+      
+      
+      1. short end:
+      LIBOR rates are simply compounded rates. 
+      => the relationship between LIBOR rates and discount factors is P(0, T) = 1 / (1 + T * L(T))
+        => P(0, 1/12) = 0.99933, P(0, 2/12) = 0.99834, P(0, 3/12) = 0.99676
+      => the relationship between discount factors and spot rates y(Ti) is y(Ti) = - lg(P(0, Ti)) / Ti
+        => y(1/12) = 0.804%, y(2/12) = 0.997%, y(3/12) = 1.30%
+      
+      2. midrange:
+      => P(0, T + x) = P(0, T) * (1 / (1 + x * F(0, T, T + x)))
+        => P(0, 3/12) = 0.997, P(0, 6/12) = 0.993, ...
+      => the relationship between discount factors and spot rates y(Ti) is y(Ti) = - lg(P(0, Ti)) / Ti
+        => y(6/12) = 1.41%, ...
+  
+      3. long end:
+      => S = m * (1 - P(0, TJ)) / (sum(P(0, Tj))
+        => P(0, 2) = 0.995, ...
+      => the relationship between discount factors and spot rates y(Ti) is y(Ti) = - lg(P(0, Ti)) / Ti
+        => y(2) = 2.3%, ...
+      ~~~
+      
   * Bootstrapping Spot Rate Curve from Bonds
     * Bootstrapping is the main technique for building a yield curve from real market data.
     * Steps:
@@ -211,7 +247,7 @@
 ---
 ---
 
-## Derivatives
+## Derivative Securities
 
 * **Basics**
   * spot price / cash price
