@@ -1,6 +1,7 @@
 # Finance
 
 ## Basics
+* [Finance 101](./finance_101.md)
 * [Financial Statement](./financial_statement.md)
 
 ## Derivatives
