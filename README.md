@@ -1,8 +1,8 @@
 # Finance
 
 ## Basics
-* [Finance 101](./finance_101.md)
-* [Financial Statement](./financial_statement.md)
+* [Finance 101](basics/finance_101.md)
+* [Financial Statement](basics/financial_statement.md)
 
 ## Derivatives
 * [Derivatives](derivatives/derivatives.md)

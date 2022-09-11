@@ -32,4 +32,4 @@
   * **Balance Sheet & Income Statement**
     * Balance Sheet: snapshot of financial status quo
     * Income Statement: rate of change of the status quo
-    ![](img/finance_101_0.png)
+    ![](../img/finance_101_0.png)
