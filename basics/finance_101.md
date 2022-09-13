@@ -40,6 +40,8 @@
 * Assets & Cash flows
   * From a business perspective, an asset is a sequence of cash flows. (current & future)
     * Assets = {CF_t, CF_t+1, CF_t+2, ...}
+
+
   * Valuing an asset requires valuing a seq of cash flows.
     * Value of asset_t = V_t(CF_t, CF_t+1, CF_t+2, ...)
     * Net Present value of asset_0 = V_0(CF_0, CF_1, CF_2, ...)
@@ -52,3 +54,28 @@
       * FV -> PV: 1/(1 + r)^T in year 0 = $1 in year T
       * PV -> FV: $1 in year 0 = 1*(1 + r)^T
       * => V_0 = CF_0 + CF_1 / (1 + r) + CF_2 / (1 + r)^2 + ...
+
+
+  * The Perpetuity
+    * pays constantly forever
+    * assume: pays constant cash flow C each year
+      * PV = C / (1+r) + C / (1+r)^2 + C / (1+r)^3 + ...
+      * (1+r) * PV = C + C / (1+r) + C / (1+r)^2 + ...
+      * => PV = C / r
+    * assume: pays cash flow C(1+g)^t each year
+      * PV = C / (1+r) + C*(1+g) / (1+r)^2 + ...
+      * => PV = C / (r-g), r>g
+
+
+  * The Annuity
+    * pays for a period
+    * assume: pays constant cash flow C for T periods
+      * PV = C / (1+r) + C / (1+r)^2 + ... + C / (1+r)^T
+      * => PV = C/r - C/r * (1 / (1+r)^T)
+
+
+  * Compounding
+    * Interest credited/charged more often than annually
+    * APR: claimed interest rate
+    * EAR: effective interest rate (consider compounding)
+    * EAR = (1 + APR / n)^n - 1 (as if compounded annually)
