@@ -79,3 +79,14 @@
     * APR: claimed interest rate
     * EAR: effective interest rate (consider compounding)
     * EAR = (1 + APR / n)^n - 1 (as if compounded annually)
+
+
+  * Inflation
+    * change in real purchasing power of $1 over time
+    * at time t: Wealth W_t, Cost of Living I_t
+    * at time t+k, W_t+k, I_t+k
+      * => increase in cost of live: I_t+k / I_t = (1 + x)^k
+      * => real wealth: W_t+k' = W_t+k / (1+x)^k
+      * => real return: (1+r_real)^k = W_t+k' / W_t
+        * => W_t+k / W_t * (1 / (1+x)^k)
+        * => r_real = r_nominal - x
