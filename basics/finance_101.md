@@ -110,3 +110,10 @@
       * P0 = F / (1+r)^T (assume r is constant)
       * what if r varies over time?
         * denote r_t the spot rate of interest at year t
+        * P0 = F / (1+r_0,T)^T (r_0,T is today's T-year spot rate)
+        * P_t-1 / P_t = 1 + f_t (f_t is one-year forward rate)
+          * forward interest rate are today's rates for txn between future dates t1 & t2. 
+
+    * coupon bond
+      * P0 = C/(1+y) + C/(1+y)^2 + ... + (C+F)/(1+y)^T (y: yield)
+      
