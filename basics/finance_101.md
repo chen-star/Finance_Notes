@@ -124,3 +124,46 @@
   * Equity, an ownership position, in a corporation
   * payouts are dividends, in 2 forms: cash dividends, stock dividends
   * payouts are uncertain in both magnitude and timing
+
+
+---
+
+
+### Forwards & Futures contracts
+
+* Diff
+  * Forwards & Futures:
+  A contract to exchange an asset in the future at specified price and time.
+  * Options:
+  Gives the holder the right to buy(call option) or sell(put option) an asset at a specified price.
+  * Swaps:
+  An agreement to exchange a series of cash flows at specified prices and times.
+
+
+* Forward Contracts
+  * Definition: A forward contract is a commitment to purchase at a future data a given amount of a commodity or an asset at a price agreed on today.
+  * The price fixed now for futures exchange is the ***forward price***.
+  * The buyer of the underlying is said to be "long" the forward.
+
+  * Features:
+    * Customized, not traded on OTC
+    * No money changes hands until maturity
+    * Non-trivial counterparty risk
+
+  * Limitations:
+    * Illiquidity
+    * Counterparty risk
+
+
+* Futures Contracts
+  * Definition: A future contract is an exchange-trade, standardized, forward-like contract that is marked-to-market daily. This contract can be used to establish a long(or short) position in the underlying asset.
+
+  * Features:
+    * Standardized: underlying, quantity, maturity
+    * Exchange traded
+    * Guaranteed by the clearing house - no counterparty risk
+    * gains/losses settled daily (marked to market)
+    * margin required as collateral to cover losses
+
+
+* Valuation of Forwards & Futures
