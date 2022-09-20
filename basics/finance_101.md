@@ -116,4 +116,11 @@
 
     * coupon bond
       * P0 = C/(1+y) + C/(1+y)^2 + ... + (C+F)/(1+y)^T (y: yield)
-      
+
+---
+
+### Equity
+* What is Common Stock?
+  * Equity, an ownership position, in a corporation
+  * payouts are dividends, in 2 forms: cash dividends, stock dividends
+  * payouts are uncertain in both magnitude and timing
