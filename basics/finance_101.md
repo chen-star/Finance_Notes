@@ -167,3 +167,14 @@
 
 
 * Valuation of Forwards & Futures
+  * Notations
+    * Spot price of underlying at t: S_t
+    * Forward price: S_t_T
+    * Futures price: F_t_T
+    * assume S_t_T == F_t_T
+
+  * 2 ways to buy the underlying for date T delivery
+    * buy a forward/futures contract with maturity T
+    * buy the underlying and store it until T
+  
+  ![](../img/finance_101_3.png)
