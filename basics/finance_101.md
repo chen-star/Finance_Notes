@@ -178,3 +178,16 @@
     * buy the underlying and store it until T
   
   ![](../img/finance_101_3.png)
+
+
+---
+
+
+### Options
+* Notations:
+S_t: underlying price, K: strike price (excise price), C_t: Call(buy) price, P_t: Put(sell) price
+
+=>
+
+C_T = max(0, S_T - K)
+P_T = max(0, K - S_T)
