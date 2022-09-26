@@ -191,3 +191,21 @@ S_t: underlying price, K: strike price (excise price), C_t: Call(buy) price, P_t
 
 C_T = max(0, S_T - K)
 P_T = max(0, K - S_T)
+
+
+---
+
+### Portfolio Theory
+* What is a portfolio?
+  * A portfolio is simply a specific combination of securities, usually defined by portfolio weights that sum to 1:
+    * w = {w1, w2, ..., wn }, sum(w1, ..., wn) = 1, wi can be negative(short)
+    * wi = NiPi / (N1P1 + ... + NnPn)
+
+
+* Why need portfolio?
+  * Portfolio provides diversification, reducing unnecessary risks
+  * Portfolios can enhance performance by focusing bets
+  * Portfolios can customize and manage risk/reward trade-offs
+
+
+
